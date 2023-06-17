@@ -16,7 +16,7 @@ def prediction(Airline, Source, Destination, Month, Day_Name, Total_Stops, Durat
     test_df.at[0,"Total_Stops"] = Total_Stops
     test_df.at[0,"Duration"] = Duration
     st.dataframe(test_df)
-    result = Model.predict(test_df)
+    result = Model.predict(test_df)[0]
     return result
 
 
